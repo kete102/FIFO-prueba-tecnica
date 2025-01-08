@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { GoogleIcon, GuestUserIcon, UserIcon } from "../components/icons";
+import { GuestUserIcon, UserIcon } from "../components/icons";
 import { AuthService } from "../services/Auth";
 import { useNavigate } from "react-router";
 
@@ -50,23 +50,13 @@ export default function SignUp() {
           />
           <button
             type="submit"
-            className="inline-flex bg-violet-400 text-black items-center gap-2 text-purple-950 w-full justify-center mb-2 hover:bg-violet-800 rounded-md py-2 px-1 font-bold hover:text-purple-300"
+            className="inline-flex bg-violet-400  items-center gap-2 text-purple-950 w-full justify-center mb-2 hover:bg-violet-800 rounded-md py-2 px-1 font-bold hover:text-purple-300"
           >
             Sign up
             <UserIcon className="w-5 h-5" />
           </button>
           <div className="w-full">
             <p className="text-zinc-500 my-3 text-center">or</p>
-            <button
-              type="button"
-              onClick={() => {
-                console.log("google sign in");
-              }}
-              className="inline-flex bg-zinc-200 text-black items-center gap-2 text-black w-full justify-center mb-2 hover:bg-zinc-400 rounded-md py-2 px-1 font-medium"
-            >
-              Sign up with <GoogleIcon className="w-4 h-4" />
-            </button>
-
             <button
               onClick={() => {
                 navigate("/");

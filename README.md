@@ -41,25 +41,28 @@ Este proyecto implementa una aplicación web que permite gestionar una lista de 
 ```
 
 2. Navegar al directorio del proyecto:
-
 ```bash
     cd fifo-challenge
 ```
 
-3. Instalar las dependencias:
-
+3. Instalar las dependencias utilizando pnpm:
 ```bash
-    npm install
+    pnpm install
 ```
 
+4. Crear un archivo .env en la raíz del proyecto y añadir tus credenciales de Firebase. El archivo debe contener las siguientes variables de entorno:
+```dontenv
+VITE_FIREBASE_API_KEY=tu-api-key-de-firebase
+VITE_FIREBASE_PROJECT_ID=tu-project-id-de-firebase
+VITE_FIREBASE_SENDER_ID=tu-sender-id-de-firebase
+VITE_FIRABASE_APP_ID=tu-app-id-de-firebase
+```
+**Asegúrate de sustituir las partes correspondientes con las credenciales que puedes obtener desde la consola de Firebase.
+
 ## Reglas de Negocio
+- Evitar duplicados: No se permite añadir tareas repetidas.
+- Validación del campo de texto: El botón "Añadir" solo está habilitado si el campo de texto contiene información.
+- Gestión FIFO: Las tareas se procesan en el orden en que se añaden.
 
-1. Evitar duplicados: No se permite añadir tareas repetidas.
-2. Validación del campo de texto: El botón "Añadir" solo está habilitado si el campo de texto contiene información.
-3. Gestión FIFO: Las tareas se procesan en el orden en que se añaden
-
-## Contribución
-
+##Contribución
 Si deseas contribuir, por favor abre un issue o envía un pull request. Todas las contribuciones son bienvenidas.
-
-> > > > > > > a0b93ce9021acf4794d654d914f898bdfafc65ed

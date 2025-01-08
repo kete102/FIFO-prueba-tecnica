@@ -37,12 +37,12 @@ Este proyecto implementa una aplicación web que permite gestionar una lista de 
 1. Clonar el repositorio:
 
 ```bash
-   git clone https://github.com/afordigital/fifo-challenge.git
+   git@github.com:kete102/FIFO-prueba-tecnica.git
 ```
 
 2. Navegar al directorio del proyecto:
 ```bash
-    cd fifo-challenge
+    cd FIFO-prueba-tecnica
 ```
 
 3. Instalar las dependencias utilizando pnpm:

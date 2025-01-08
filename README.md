@@ -57,12 +57,12 @@ VITE_FIREBASE_PROJECT_ID=tu-project-id-de-firebase
 VITE_FIREBASE_SENDER_ID=tu-sender-id-de-firebase
 VITE_FIRABASE_APP_ID=tu-app-id-de-firebase
 ```
-**Asegúrate de sustituir las partes correspondientes con las credenciales que puedes obtener desde la consola de Firebase.
+**Asegúrate de sustituir las partes correspondientes con las credenciales que puedes obtener desde la consola de Firebase.**
 
 ## Reglas de Negocio
 - Evitar duplicados: No se permite añadir tareas repetidas.
 - Validación del campo de texto: El botón "Añadir" solo está habilitado si el campo de texto contiene información.
 - Gestión FIFO: Las tareas se procesan en el orden en que se añaden.
 
-##Contribución
+## Contribución
 Si deseas contribuir, por favor abre un issue o envía un pull request. Todas las contribuciones son bienvenidas.

@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# Aplicación de Gestión de Tareas FIFO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto técnico para desarrollar una aplicación de gestión de tareas FIFO utilizando **React**, **Firebase**, **TypeScript** y **Tailwind CSS**.
 
-Currently, two official plugins are available:
+![Esquema de la prueba 1](https://media.discordapp.net/attachments/1075542478519808000/1321869986330841160/firefox_24_December_12_LBgtgSw_.png?ex=676ecedb&is=676d7d5b&hm=7a76759ea27ce2d42e4f7420352fb516d0ff7e6af5511bfcdff859a03359bc31&=&format=webp&quality=lossless&width=1157&height=671)
+![Esquema de la prueba 2](https://media.discordapp.net/attachments/1075542478519808000/1321869986712518686/firefox_24_December_12_4kVrMiw_.png?ex=676ecedb&is=676d7d5b&hm=35ec18c898e5dbc2fa570ba6f717faa942eeac435d4da444dcfd6ee5b49d86bc&=&format=webp&quality=lossless&width=1190&height=671)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción General
 
-## Expanding the ESLint configuration
+Este proyecto implementa una aplicación web que permite gestionar una lista de tareas siguiendo un enfoque de "Primero en entrar, primero en salir" (FIFO), respetando reglas de negocio específicas y principios de diseño.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Características
 
-- Configure the top-level `parserOptions` property like this:
+- **Autenticación de Usuarios:**  
+  Sistema de inicio de sesión y registro seguro implementado con **Firebase Authentication**.
+- **Almacenamiento de Datos:**
+  - Las tareas se almacenan en **Firebase** para usuarios autenticados.
+  - Los usuarios invitados gestionan las tareas localmente mediante **localStorage**.
+- **Diseño Responsivo:**  
+  Interfaz limpia y minimalista, diseñada con **Tailwind CSS**, adaptada para diferentes tamaños de pantalla.
+- **Cumplimiento de Reglas de Negocio:**
+  - No se permiten tareas duplicadas.
+  - El botón "Añadir" se desactiva cuando el campo de texto está vacío.
+  - Las tareas se procesan siguiendo un esquema FIFO.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tecnologías Utilizadas
+
+- **React**: Para la construcción de la interfaz de usuario.
+- **TypeScript**: Para garantizar la seguridad de tipos y mejorar la calidad del código.
+- **Firebase**:
+  - **Authentication**: Para gestionar el inicio de sesión y registro de usuarios.
+  - **Firestore/Database**: Para persistir las tareas de los usuarios autenticados.
+- **Tailwind CSS**: Para crear un diseño moderno y responsivo.
+
+## Instalación y Configuración
+
+1. Clonar el repositorio:
+
+```bash
+   git clone https://github.com/afordigital/fifo-challenge.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Navegar al directorio del proyecto:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+    cd fifo-challenge
 ```
+
+3. Instalar las dependencias:
+
+```bash
+    npm install
+```
+
+## Reglas de Negocio
+
+1. Evitar duplicados: No se permite añadir tareas repetidas.
+2. Validación del campo de texto: El botón "Añadir" solo está habilitado si el campo de texto contiene información.
+3. Gestión FIFO: Las tareas se procesan en el orden en que se añaden
+
+## Contribución
+
+Si deseas contribuir, por favor abre un issue o envía un pull request. Todas las contribuciones son bienvenidas.
+
+> > > > > > > a0b93ce9021acf4794d654d914f898bdfafc65ed
